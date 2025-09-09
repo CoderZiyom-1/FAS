@@ -1,10 +1,10 @@
 import streamlit as st
 from create_mem_2 import analyze_colors, get_clip_embedding, run_query
 
-st.set_page_config(page_title="Fashion Stylist AI", page_icon="👗", layout="centered")
+st.set_page_config(page_title="Fashion bot", page_icon="👗", layout="centered")
 st.title(" Fashion Police")
 
-uploaded = st.file_uploader("📸 Upload your outfit image", type=["jpg", "png"])
+uploaded = st.file_uploader("📸 Upload an image of your outfit", type=["jpg", "png"])
 
 outfit_info = ""  # to store extracted details
 
@@ -29,4 +29,5 @@ if user_query:
     response = run_query(user_query, outfit_info=outfit_info)
     st.subheader("🧾 Fashion Q&A Result")
     st.markdown(response)
+
 
