@@ -4,7 +4,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import OllamaEmbeddings
 
 # Step 1: Load raw PDF(s)
-DATA_PATH = r"C:\Users\Ziyom\Desktop\PP5\DATA"  # Use raw string
+DATA_PATH = r"PATH"  # Use raw string
 def load_pdf_files(data):
     loader = DirectoryLoader(data,
                              glob='*.pdf',
@@ -37,5 +37,6 @@ embedding_model = get_embedding_model()
 DB_FAISS_PATH="vectorstore/db_faiss"
 db=FAISS.from_documents(text_chunks, embedding_model)
 db.save_local(DB_FAISS_PATH)
+
 
 
