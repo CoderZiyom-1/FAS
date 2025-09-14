@@ -1,4 +1,4 @@
-Fashion & Outfit Assistant Chatbot
+Fashion & Outfit Assistant Chatbot (Still work in progress!)
 
 This repository contains a chatbot designed to assist with outfit selection and fashion-related queries. The chatbot can be used directly from your code editor or through a Streamlit interface in your browser.
 
