@@ -34,18 +34,18 @@ def analyze_colors(file_path):
     named_colors = [closest_color(c) for c in palette]
     base_color = named_colors[0]
 
-    suggestions = f"🎨 Detected main colors: {', '.join(named_colors)}.\n"
-    suggestions += f"👉 Your dominant shade is **{base_color}**.\n"
+    suggestions = f" Detected main colors: {', '.join(named_colors)}.\n"
+    suggestions += f" Your dominant shade is **{base_color}**.\n"
 
     # Fashion color theory
     if base_color in ["brown", "saddlebrown", "peru", "chocolate"]:
-        suggestions += "✅ Brown pairs well with navy, cream, beige, and forest green.\n"
+        suggestions += " Brown pairs well with navy, cream, beige, and forest green.\n"
     elif base_color in ["black", "dimgray", "gray"]:
-        suggestions += "✅ Black/Gray go with almost anything; add bold colors like red or cobalt for contrast.\n"
+        suggestions += " Black/Gray go with almost anything; add bold colors like red or cobalt for contrast.\n"
     elif base_color in ["white", "linen", "ivory"]:
-        suggestions += "✅ White looks crisp with navy, olive, black, or pastels.\n"
+        suggestions += " White looks crisp with navy, olive, black, or pastels.\n"
     else:
-        suggestions += "✨ Try complementary or contrasting accents to make the outfit pop.\n"
+        suggestions += " Try complementary or contrasting accents to make the outfit pop.\n"
 
     return suggestions, named_colors
 
@@ -104,3 +104,4 @@ def run_query(query: str, outfit_info: str = ""):
     })
 
     return response["text"]
+
