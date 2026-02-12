@@ -1,15 +1,110 @@
-Fashion & Outfit Assistant Chatbot (Still work in progress!)
+**Fashion Stylist AI Agent** (Multimodal RAG System) (Work-inprogress)
 
-This repository contains a chatbot designed to assist with outfit selection and fashion-related queries. The chatbot can be used directly from your code editor or through a Streamlit interface in your browser.
+Fashion Stylist AI is a multimodal AI system that provides intelligent outfit styling suggestions using:
 
-Usage Instructions
+1. Computer Vision
 
-To add data to the model, run the script YSL_2 after changing the directory to your stored data.
+2. Color Analysis
 
-To launch the Streamlit interface, run the script Manish.
+3. CLIP Image Embeddings
 
-You can interact with the chatbot either:
+4. Retrieval-Augmented Generation (RAG)
 
-Directly in your code editor, or
+5. Local LLM (Mistral via Ollama)
 
-Through the Streamlit web interface.
+Users upload an outfit image and receive professional styling advice grounded in fashion knowledge.
+
+**Tech Stack**
+
+1. CLIP (Image Understanding)
+
+2. LangChain
+
+3. FAISS Vector Database
+
+4. Ollama (Mistral LLM)
+
+5. Streamlit
+
+
+**Color Palette Extraction**
+
+**Architecture**
+
+
+1️⃣ Image Upload
+
+2️⃣ Color Palette Extraction
+
+3️⃣ CLIP Visual Embedding
+
+4️⃣ Fashion Knowledge Retrieval (RAG)
+
+5️⃣ LLM Style Reasoning
+
+6️⃣ Final Styling Advice
+
+
+**Features**
+
+1. Outfit color detection
+2. Visual understanding using CLIP
+3. AI fashion recommendations
+4. Knowledge-grounded styling advice
+5. Local AI inference (privacy-friendly)
+6. Streamlit interactive UI
+
+
+**Setup Instructions**
+
+1. Install Ollama
+
+
+https://ollama.com
+
+
+Pull model:
+
+ollama pull mistral
+
+2. Install dependencies
+
+pip install -r requirements.txt
+
+3. Ingest Fashion Knowledge PDFs
+
+Update path in:
+
+data_ingestion.py
+
+
+Run:
+
+python data_ingestion.py
+
+4. Run App
+
+streamlit run app.py
+
+**Use Cases**
+
+AI wardrobe assistant
+
+E-commerce styling
+
+Personal fashion AI
+
+Outfit compatibility analysis
+
+**Future Improvements**
+
+Occasion detection
+
+Body-type recommendations
+
+Trend-aware suggestions
+
+
+**Author**
+
+Moyiz Khan
